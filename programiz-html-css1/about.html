@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haitham AlMalki - Administrative Assistant</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        /* Additional custom styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            margin-top: 0;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        
+        .portfolio-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .portfolio-gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Haitham AlMalki</h1>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="/about .me.html">About Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#interests">Interests</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <img src="../programiz-html-css1/WhatsApp Image 2023-10-28 at 20.51.06.png.jpeg" alt="My photo" class="profile-photo">
+            <h2>Welcy personal website!</h2>
+            <p>Here My LinkedIn Profile, you can learn more about me, my skills and experience, and my interests.</p>
+            <a href="https://www.linkedin.com/in/haithamalmalki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="button">Learn more about me</a>
+        </section>
+
+
+        <section>
+            <h2>About Me</h2>
+            <p>I am a dedicated professional with over 5 years of experience providing effective administrative support and customer service in fast-paced environments. I have strong expertise in office management, data entry, scheduling, record keeping,
+                communication, and problem-solving. I am proficient in Microsoft Office.</p>
+        </section>
+
+        <section id="resume-portfolio">
+            <h2>Resume</h2>
+            <a href="file:/Users/ccagent/Desktop/Haitham AlMalki - Administrative Assistant - CV (1).pdf" class="button">Download my resume</a>
+            <div class="portfolio-gallery">
+
+            </div>
+        </section>
+
+        <section id="blog-interests">
+            <h2>Interests</h2>
+            <ul>
+                <li><a href="#">My first blog post</a></li>
+                <li><a href="#">My second blog post</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="mail.php" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <!-- Add this code after the closing tag of the form element in the "contact" section -->
+                <button type="submit" class="button">Submit</button>
+            </form>
+
+            <!-- Add this code before the closing tag of the body element -->
+            <script>
+                // JavaScript code for form submission
+                var form = document.querySelector('form');
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent form submission
+
+                    // Perform form validation and data processing here
+
+                    // Example: Display a success message
+                    alert('Form submitted successfully!');
+                });
+
+                // JavaScript code for image slider
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("portfolio-gallery")[0].getElementsByTagName("img");
+
+                    // Hide all slides
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+
+                    // Increment slide index
+                    slideIndex++;
+
+                    // Reset slide index if it exceeds the number of slides
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    }
+
+                    // Display the current slide
+                    slides[slideIndex - 1].style.display = "block";
+
+                    // Change slide every 3 seconds (adjust as needed)
+                    setTimeout(showSlides, 3000);
+                }
+            </script>
+
+</body>
+
+</html>
